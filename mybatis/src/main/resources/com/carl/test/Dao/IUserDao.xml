@@ -5,4 +5,8 @@
     <select id="findAll" resultType="com.carl.test.domain.User">
         select * from user
     </select>
+
+    <select id="findByName" resultType="com.carl.test.domain.User">
+        select * from user where name like #{name}
+    </select>
 </mapper>
