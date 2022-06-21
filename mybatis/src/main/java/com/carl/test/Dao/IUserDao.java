@@ -1,6 +1,7 @@
 package com.carl.test.Dao;
 
 import com.carl.test.domain.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -10,5 +11,5 @@ import java.util.List;
 public interface IUserDao {
     List<User> findAll();
 
-    List<User> findByName(String Name);
+    List<User> findByName(@Param("name") String name,@Param("id") Integer id,@Param("sexy") String sexy);
 }

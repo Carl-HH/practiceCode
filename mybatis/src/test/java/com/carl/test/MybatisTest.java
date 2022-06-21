@@ -25,7 +25,7 @@ public class MybatisTest {
         //5.使用代理对象执行方法
 //        List<User> all = userDao.findAll();
 //        all.forEach(System.out::println);
-        List<User> namel = userDao.findByName("%test%");
+        List<User> namel = userDao.findByName("",3,"man");
         namel.forEach(System.out::println);
         //6.释放资源
         session.close();

@@ -7,6 +7,11 @@
     </select>
 
     <select id="findByName" resultType="com.carl.test.domain.User">
-        select * from user where name like #{name}
+        select * from user
+        <where>
+            id = #{id}
+            <if test="name != null and name != ''">and name like #{name}</if>
+            <if test="sexy != null and sexy != ''">and sexy = #{sexy}</if>
+        </where>
     </select>
 </mapper>
